@@ -1,0 +1,27 @@
+<div class="create-Flashcard mt-3 ms-4" >
+    <h3>Create Flashcard</h3>
+    <form #ngForms class="mt-3" (ngSubmit)="createFlashcard()">
+        <div class="form-group mt-3">
+            <label for="name">Topic</label>
+            <input type="text" name="name" id="name" [(ngModel)]="newTopic.name" class="form-control p-2" #name="ngModel" required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger p-2">
+                <p>Name is required</p>
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label for="definition">Definition</label>
+            <textarea name="definition" id="definition"  rows="4" class="form-control p-2" [(ngModel)]="newTopic.definition" #definition="ngModel" required></textarea>
+            <div [hidden]="definition.valid || definition.pristine" class="alert alert-danger p-2">
+                <p>Definition is required</p>
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" class="form-control  p-2" [(ngModel)]="newTopic.date" #date="ngModel" required>
+            <div [hidden]="date.valid || date.pristine" class="alert alert-danger p-2">
+                <p>Date is required</p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success mt-3 p-1">Add Topic</button>
+    </form>
+</div>

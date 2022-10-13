@@ -1,0 +1,26 @@
+header{
+    background-color: #2B7A0B !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px !important;
+}
+header .logo{
+    font-size: 24px;
+    color: #fff;
+}
+header nav ul{
+    display: block;
+    list-style: none;
+    color: #fff;
+}
+header nav ul li{
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}

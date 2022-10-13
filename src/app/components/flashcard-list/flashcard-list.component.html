@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <div>
+        <div *ngFor="let topic of topics;let i = index;" class="container">
+            <div [ngStyle]="{display: 'flex' }">
+                <h3>{{ topic.name }}</h3>
+                <p class="ms-2">posted on {{ topic.date | date }}</p>
+            </div>
+            <app-flashcard-details [topic]="topic" *ngIf="topic.isDisplayed"></app-flashcard-details>
+            <div class="button">
+                <button type="button" class="btn  btn-info p-1" (click)="toggleDetails(i)">view</button>
+                <button type="button" class="btn btn-danger p-1" (click)="deleteDetail(true,i)" >Delete</button>
+            </div>
+        </div>
+    </div>
+    <app-flashcardforms (createNewFlashcard)="addFlashcard($event)"></app-flashcardforms>
+</div>

@@ -1,0 +1,30 @@
+.wrapper{
+    width: 800px !important;
+    margin: 30px auto !important;
+    display: flex !important;
+    
+}
+.container{
+    width: 450px;
+    background-color: #fff;
+    margin-top: 20px !important;
+    padding: 10px !important;
+    border-radius: 5px;
+}
+.container h3{
+    font-size: 20px !important;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px !important;
+}
+
+.viewBtn{
+    background-color: #2192FF;
+    color: #fff;
+}
+.deleteBtn{
+    background-color: #FF1E1E;
+    color: #fff;
+}
